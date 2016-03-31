@@ -18,6 +18,9 @@ var api = new ParseServer({
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   restAPIKey: process.env.REST_API_KEY || '',
+  console.log(process.env.S3_ACCESS_KEY);
+  console.log(process.env.S3_SECRET_KEY);
+  console.log(process.env.S3_BUCKET);
   filesAdapter: new S3Adapter(
     process.env.S3_ACCESS_KEY,
     process.env.S3_SECRET_KEY,
